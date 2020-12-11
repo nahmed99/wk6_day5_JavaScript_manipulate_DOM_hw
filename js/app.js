@@ -4,6 +4,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const newStemForm = document.querySelector('#new-stem-form');
     newStemForm.addEventListener('submit', handleNewStemFormSubmit);
+
+    // Add a 'delete all' button
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = "Delete All";
+    // Attach 'delete all' button to the (HTML) body tag - this will be added to the end.
+    const bodyParent = document.querySelector('body');
+    bodyParent.appendChild(deleteButton);
+
+    
+
+
 });
 
 
