@@ -12,7 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const bodyParent = document.querySelector('body');
     bodyParent.appendChild(deleteButton);
 
-    
+
+    // Listen for any events originating from the 'delete all' button.
+    const deletePress = document.querySelector('button');
+    deletePress.addEventListener('click', handleDeleteAllInput);
 
 
 });
@@ -48,13 +51,9 @@ const createStemListItem = function (form) {
 }
 
 
-
-
-//   // create new list item for each book
-//   const newListItem = document.createElement('li');
-//   newListItem.textContent = `Title: ${titleInput} Author: ${authorInput}
-//                              Category: ${categoryInput}`;
-//   const listParent = document.querySelector('#reading-list');
-
-//   // attach the newly created list item to the unordered list
-//   listParent.appendChild(newListItem);
+// Handle 'delete all' events
+const handleDeleteAllInput = function(){
+    const deleter = document.getElementById("stem-list");
+    // const deleter = document.querySelector('#stem-list');
+    deleter.remove();
+}
