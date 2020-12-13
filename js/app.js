@@ -5,6 +5,26 @@ document.addEventListener('DOMContentLoaded', () => {
     const newStemForm = document.querySelector('#new-stem-form');
     newStemForm.addEventListener('submit', handleNewStemFormSubmit);
 
+
+    // Add label for radio buttons
+    const labelRadio = document.createElement("label");
+    labelRadio.textContent = "Tick If Over 21?";
+
+    // Add radio button to select status
+    const radioButton = document.createElement('input');
+    radioButton.setAttribute("type", "radio");
+    radioButton.id = 'age';
+    radioButton.value = labelRadio;
+
+    // Attach the radio button to lableRadio
+    labelRadio.appendChild(radioButton);
+    
+    // Creat link to place the new button
+    const newFormItems = document.querySelector('#new-form-items');
+    // Attach label and radio to form
+    newFormItems.appendChild(labelRadio);
+
+
     // Add a 'delete all' button
     const deleteButton = document.createElement('button');
     deleteButton.textContent = "Delete All";
@@ -44,8 +64,17 @@ const createStemListItem = function (form) {
     const lastName = form.last_name.value;
     const speciality = form.speciality.value;
 
+    let ageCheck = "is ";
+    if (form.age.checked) {
+        ageCheck += "over 21";
+    } else {
+        ageCheck += "not over 21";
+    }
+
+
+
     // Interpolate data to insert into the list item
-    stemListItem.textContent = `${firstName} ${lastName} specialises in ${speciality}.`;
+    stemListItem.textContent = `${firstName} ${lastName} specialises in ${speciality} and ${ageCheck}.`;
 
     return stemListItem;
 }
