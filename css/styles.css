@@ -1,0 +1,41 @@
+.form-item {
+    padding: 5px;
+    margin: 5px 25px;
+    font-size: 1.3em;
+    color: blue;
+}
+
+#first_name, #last_name {
+    padding: 5px;
+    margin: 5px 25px;
+    border-radius: 5px;
+    border: solid 3px blueviolet;
+    width: 200px;
+}
+
+#speciality {
+    padding: 5px;
+    margin: 5px 25px;
+    border-radius: 5px;
+    border: solid 3px blueviolet;
+    width: 200px;
+    font-size: 0.9em;
+}
+
+
+button {
+    font-size: 1.2em;
+    color: yellow;
+    background-color: black;
+    border-color: black;
+    border-radius: 5px;;
+}
+
+.stem-list-item {
+    padding: 15px;
+    list-style-type: none;
+    color: green;
+    background-color: lawngreen;
+    font-size: 1.3em;
+    width: 650px; 
+}
